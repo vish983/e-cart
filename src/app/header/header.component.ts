@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  menuArray = [];
+
 
   constructor() { }
 
   ngOnInit(): void {
+    this.menuArray=[
+      {name:'Products',urlname:'product',font:'th'},
+      {name:'Cart', urlname:'category',font:'shopping-cart'},
+  ]
   }
 
 }

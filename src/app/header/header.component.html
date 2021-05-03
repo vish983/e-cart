@@ -1,1 +1,21 @@
-<p>header works!</p>
+<div class="row mx-0 text-white mt-3">
+    <div class="col-10">
+        <div class="float-left logo mb-1 ">
+        <a href="" class="text-decoration-none text-white"  >
+            <i class="fa fa-user text-left"></i> 
+                E-Cart
+        </a>
+        </div>
+        <div class="float-right">
+            <ul>
+                <li class="list-inline-item text-decoration-none pt-2" *ngFor="let item of menuArray">
+                    <a href="" class="text-decoration-none text-white" routerLink="{{'/' + item.urlname}}">
+                        <i class="fa fa-{{item.font}} mr-1"></i>
+                        {{item.name}}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
