@@ -1,8 +1,28 @@
-.background{
-    background: url(../../assets/images/light-bulbs-5488573.jpg);
+.thumbimg{
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+}
+
+.backimage{
+    height: 200px;
+    width: 100%;
+    
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
-    height: 100vh;
-    }
-    
+}
+.skin{
+    height: 200px;
+    width: 100%;
+    transition: all .3s ease-in-out;
+}
+.desc_text{
+    display: none;
+    transition: all .3s ease-in-out;
+}
+.skin:hover .desc_text{
+    display: block;
+    transition: all .3s ease-in-out;
+}
+.skin:hover{
+    background-color: #21252982;
+}

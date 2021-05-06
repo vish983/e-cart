@@ -1,0 +1,9 @@
+.back{
+    background-image: url(../../assets/images/watercolor-795161_1920.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    height: 70px;
+    width: 200px;
+    justify-content: center;
+}

@@ -12,10 +12,6 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.menuArray=[
-      {name:'Products',urlname:'product',font:'th'},
-      {name:'Cart', urlname:'category',font:'shopping-cart'},
-  ]
   }
 
 }
