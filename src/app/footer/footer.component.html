@@ -1,1 +1,42 @@
-<p>footer works!</p>
+<div class="row mx-0">
+    <div class="col-4 text-white text-center">
+        <div class="h2 ml-5">E-Cart</div>
+        <div>
+            <ul>
+                <li class="text-decoration-none list-inline-item text-white mt-3 ml-3 h3" *ngFor="let item of social">
+                    <a href="">
+                        <i class="fa fa-{{item.url}} text-white"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-4 text-center">
+        <div class="text-muted mb-4 text-center">
+            Support
+        </div>
+        <div>
+            <ul class="list-unstyled">
+                <li class=" mb-3 text-white" *ngFor="let item of social">
+                    {{item.support}}
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-4 text-white">
+        <div>
+            <i class="fa fa-envelope mr-2 "></i>
+            <span class="text-muted">Stay up to date on the latest from E-Cart</span>
+        </div>
+        <div class="mt-5">
+            <mat-form-field appearance='outline' class="text-white" style="width: 70%;" >
+                 <mat-label class="text-muted">Enter E-mail</mat-label>
+                 <input matInput >
+             </mat-form-field>
+        </div>
+        <div>
+            <button mat-raised-button color='warn'style="width: 70%;" >Signup</button>
+        </div>
+    </div>
+    
+</div>
