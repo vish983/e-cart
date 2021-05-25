@@ -3,6 +3,6 @@
         <h2 class="ml-3">Category</h2>
     </div>
     <div class="col-12">
-        <button mat-button color=primary  class="w-100 text-left" *ngFor="let item of categoryArray">{{item}}</button>
+        <button (click)="navigateToCategoryItems(item)" mat-button color=primary  class="w-100 text-left" *ngFor="let item of categoryArray">{{item}}</button>
     </div>
 </div>

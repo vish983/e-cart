@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiServiceService } from '../services/api-service.service';
 
 @Component({
@@ -9,13 +10,17 @@ import { ApiServiceService } from '../services/api-service.service';
 export class CategoryComponent implements OnInit {
   categoryArray;
 
-  constructor(private category: ApiServiceService) { }
+  constructor(private category: ApiServiceService, private router: Router) { }
 
   ngOnInit(): void {
     this.category.getAllcategory().subscribe(category =>{
       this.categoryArray = category;
     })
  
+  }
+
+  navigateToCategoryItems = (cat) => {
+    this.router.navigate(['/category', cat]);
   }
 
 }

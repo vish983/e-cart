@@ -43,6 +43,10 @@ import {MatTableModule} from '@angular/material/table';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { CartComponent } from './cart/cart.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CategoryItemsComponent } from './category-items/category-items.component';
+import { UsersComponent } from './users/users.component';
+import { IndividualUserComponent } from './individual-user/individual-user.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -54,12 +58,16 @@ import { HttpClientModule } from '@angular/common/http';
     CategoryComponent,
     DashboardComponent,
     NotFoundComponent,
-    CartComponent
+    CartComponent,
+    CategoryItemsComponent,
+    UsersComponent,
+    IndividualUserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     MatAutocompleteModule,
     MatBadgeModule,

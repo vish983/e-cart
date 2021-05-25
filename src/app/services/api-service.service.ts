@@ -14,7 +14,16 @@ export class ApiServiceService {
   getAllProductsData = () => {
     return this.http.get('https://fakestoreapi.com/products');
   }
-  getAllcategory = () =>{
+  getAllcategory = () => {
     return this.http.get('https://fakestoreapi.com/products/categories');
+  }
+  getItemsByCategory = (cat) => {
+    return this.http.get('https://fakestoreapi.com/products/category/' + cat);
+  }
+  getAllUserData = () =>{
+    return this.http.get('https://fakestoreapi.com/users');
+  }
+  getAllUserById = (id) =>{
+    return this.http.get('https://fakestoreapi.com/users/' + id )
   }
 }
