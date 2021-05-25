@@ -7,14 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'e-cart';
-  menuArray;
-
-  ngOnInit(): void {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
+  menuArray = [];
+  constructor () {
     this.menuArray = [
       {name: 'Products', urlname: 'product', font: 'th'},
       {name: 'Cart', urlname: 'cart', font: 'shopping-cart'},
+      {name: 'Users', urlname: 'user', font: 'user'},
   ];
+  }
+
+  ngOnInit(): void {
+    
   }
 }
