@@ -5,6 +5,7 @@ import { CategoryItemsComponent } from './category-items/category-items.componen
 import { CategoryComponent } from './category/category.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { IndividualUserComponent } from './individual-user/individual-user.component';
+import { LoginComponent } from './login/login.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ProductComponent } from './product/product.component';
 import { UsersComponent } from './users/users.component';
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: '', component: DashboardComponent},
   {path: 'user', component: UsersComponent},
   {path: 'product', component: ProductComponent},
+  { path: 'login', component: LoginComponent},
   {path: 'cart', component: CartComponent},
   {path: 'not-found', component: NotFoundComponent},
   {path: 'category/:category', component: CategoryItemsComponent},

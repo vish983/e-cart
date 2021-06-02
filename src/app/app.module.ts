@@ -47,6 +47,7 @@ import { CategoryItemsComponent } from './category-items/category-items.componen
 import { UsersComponent } from './users/users.component';
 import { IndividualUserComponent } from './individual-user/individual-user.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -61,7 +62,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CartComponent,
     CategoryItemsComponent,
     UsersComponent,
-    IndividualUserComponent
+    IndividualUserComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

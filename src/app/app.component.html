@@ -1,5 +1,5 @@
 
-<mat-sidenav-container class="example-container background">
+<mat-sidenav-container *ngIf="ableToRender" class="example-container background">
     <mat-sidenav #sidenav mode="over" [fixedInViewport]="true"  style="max-width: 300px;">
         <app-category></app-category>
     </mat-sidenav>
@@ -11,7 +11,7 @@
                     <button mat-icon-button  class="mr-5 text-white" (click)="sidenav.toggle()">
                         <mat-icon >menu</mat-icon>
                     </button>
-                    <a href="" class="text-decoration-none text-white"  >
+                    <a routerLink="/" href="" class="text-decoration-none text-white"  >
                      <i class="fa fa-user text-left"></i> 
                         E-Cart
                     </a>
@@ -32,5 +32,11 @@
         <app-footer></app-footer>
     </mat-sidenav-content>
   </mat-sidenav-container>
+
+  <div class="row mx-0" *ngIf="ableToRender === false">
+      <div class="col-12 text-center mt-5 p-5 fa-5x">
+          <i class="fa fa-spinner fa-spin"></i> Fetching data....
+      </div>
+  </div>
 
 

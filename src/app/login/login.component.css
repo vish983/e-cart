@@ -1,0 +1,9 @@
+.userbox{
+    box-shadow: inset 0px 0px 10px 10px rgb(154, 153, 156);
+}
+.button{
+    width: 40%;
+    border-radius: 20px;
+    box-shadow: inset 1px 1px 0px 2px rgb(2, 47, 90);
+    
+}
