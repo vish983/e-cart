@@ -1,0 +1,190 @@
+
+<mat-dialog-content  *ngIf="!isEditAble">
+    <div class="row mx-0">
+        <div class="col-12  h2 text-capitalize">
+            {{userData.name.firstname}} {{userData.name.lastname}}
+        </div>
+    </div>
+    <div  class="row mx-0">
+        <div class="col-6  border-right">
+            <u><h2>Details</h2></u>
+            <div>
+                Email- {{userData.email}}
+            </div>
+            <div>
+                Phone No.- {{userData.phone}}
+            </div>
+            <div class="text-muted">
+                <h3><b><u>Address</u></b></h3>
+            </div>
+            <div>
+                City - {{userData.address.city}}
+            </div>
+            <div>
+                street - {{userData.address.street}} , {{userData.address.number}}
+            </div>
+            <div>
+                Zipcode - {{userData.address.zipcode}}
+            </div>
+            <div>
+                <u>Geolocation: </u>
+                <div> Latitude- {{userData.address.geolocation.lat}}</div>
+                <div>Longitude - {{userData.address.geolocation.long}}</div>
+            </div>
+        </div>
+        <div class="col-6 ">
+            <h2><u>Login Info.</u></h2>
+            <div>
+                User Id - {{userData.id}}
+            </div>
+            <div>
+                Password - {{userData.password}}
+            </div>
+        </div>
+    </div> 
+    <div class="row my-4 justify-content-center">
+        <div class="col-6 ">
+            <button mat-raised-button class="bg-primary"
+             style="width: 100%;" 
+            (click)="editData()">
+                        Edit
+            </button>
+        </div>
+    </div>   
+    
+</mat-dialog-content > 
+
+<mat-dialog-content  *ngIf="isEditAble">
+    <form [formGroup]="userEdit">
+        
+        <div class="row mx-0">
+            <div class="col-12 px-0">
+                <h3>Name</h3>
+                <div class="row mx-0">
+                    <div class="col-6">
+                            <mat-form-field appearance="outline" color="primary" class="w-100">
+                                <mat-label class="text-dark">FirstName</mat-label>
+                                <input matInput type="text"  formControlName="firstname" >
+                            </mat-form-field>
+                    </div>
+                    <div class="col-6  ">
+                        <mat-form-field appearance='outline' style="width: 100%;" >
+                            <mat-label class="text-dark">Last Name</mat-label>
+                            <input  matInput type="text" formControlName="lastname"  >
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mx-0">
+            <div class="col-6">
+                <div>
+                    <mat-form-field appearance = 'outline'  style="width: 100%;" >
+                        <mat-label class="text-dark">E-Mail</mat-label>
+                        <input matInput type="email" formControlName="email" >
+                    </mat-form-field>
+                </div>
+               
+            </div>
+            <div class="col-6">
+                <div>
+                    <mat-form-field appearance = 'outline'  style="width: 100%;" >
+                        <mat-label class="text-dark">phone no.</mat-label>
+                        <input matInput formControlName="phone" >
+                    </mat-form-field>
+                </div>
+            </div>
+            
+            
+        </div>
+        <h3>Login info</h3>
+        <div class="row mx-0">
+            <div class="col-6">
+                    
+                    <div>
+                        <mat-form-field appearance = 'outline'  style="width: 100%;" >
+                            <mat-label class="text-dark">Login Id</mat-label>
+                            <input matInput formControlName="loginId" >
+                        </mat-form-field>
+                    </div>
+                    
+            </div>
+            <div class="col-6">
+                <div>
+                    <mat-form-field appearance = 'outline'  style="width: 100%;" >
+                        <mat-label class="text-dark">password</mat-label>
+                        <input matInput  formControlName="password" >
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+        <h3>Address</h3>
+        <div class="row mx-0">
+            <div class="col-12">
+               
+                <div class="row mx-0">
+                    <div class="col-6">
+                        <div>
+                            <mat-form-field appearance = 'outline'  style="width: 100%;" >
+                                <mat-label class="text-dark">City</mat-label>
+                                <input matInput  formControlName="city" >
+                            </mat-form-field>
+                        </div>
+                        
+                    </div>
+                    <div class="col-6">
+                        <div>
+                            <mat-form-field appearance = 'outline'  style="width: 100%;" >
+                                <mat-label class="text-dark">Street</mat-label>
+                                <input matInput  formControlName="street" >
+                            </mat-form-field>
+                        </div>
+                        
+                    </div>
+                    <div class="col-6">
+                        <div>
+                            <mat-form-field appearance = 'outline'  style="width: 100%;" >
+                                <mat-label class="text-dark">Street Number</mat-label>
+                                <input matInput  formControlName="number" >
+                            </mat-form-field>
+                        </div>
+                        
+                    </div>
+                    <div class="col-6">
+                        <div>
+                            <mat-form-field appearance = 'outline'  style="width: 100%;" >
+                                <mat-label class="text-dark">Zipcode</mat-label>
+                                <input matInput  formControlName="zipcode" >
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div>
+                            <mat-form-field appearance = 'outline'  style="width: 100%;" >
+                                <mat-label class="text-dark">Latitude</mat-label>
+                                <input matInput  formControlName="latitude" >
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div>
+                            <mat-form-field appearance = 'outline'  style="width: 100%;" >
+                                <mat-label class="text-dark">longitude</mat-label>
+                                <input matInput  formControlName="longitude" >
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+   </form>
+  
+</mat-dialog-content>
+<mat-dialog-actions align="end"  *ngIf="isEditAble">
+    <button mat-stroked-button color="warn" mat-dialog-close>CANCEL</button>
+    <button mat-raised-button color="primary" (click)="saveData()">EDIT and SUBMIT</button>
+</mat-dialog-actions>
+
+
+

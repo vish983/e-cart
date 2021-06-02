@@ -1,0 +1,56 @@
+<!-- <div class="row mx-0">
+    <div class="container">
+        <div class="row mx-0">
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 " *ngFor="let item of productArray">
+                <div class="row mx-0">
+                    <div class="col-12">
+                      <div [ngStyle] = "{ backgroundImage: 'url:('+ item.image +')'}">
+                          <div >
+                              <div></div>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                        <div>title</div>
+                        <div>category</div>
+                        <div>price</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="row mx-0 background text-light py-5">
+    <div class="container px-0">
+        <div class="row mx-0 ">
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 my-3 " *ngFor="let product of productArray">
+                <div class="row mx-0 bg-white rounded">
+                    <div class="col-12 px-0">
+                      <div class="backimage rounded" [ngStyle]="{backgroundImage: 'url(' + product.image + ')'}">
+                        <div class="skin">
+                          <div class="pt-2 pl-2 desc_text">{{product.description}}</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 px-0 text-dark ml-1">
+                      <div class="ml-1 mt-2 text-truncate">{{product.title}}</div> 
+                      <div class="text-muted ml-1"> {{product.category}}</div>
+                      <div class="ml-1 my-2"><i class="fa fa-usd"></i>  {{product.price}} </div>
+                    </div>
+                    
+                    <div class="col-12 px-0">
+                      <div class="row mx-0 mb-2">
+                        <div class="col-6 px-1 ">
+                          <button mat-flat-button color="warn" style="width: 100%;"><i class="fa fa-shopping-cart"></i> Add to cart</button>
+                        </div>
+                        <div class="col-6 px-0">
+                          <button mat-flat-button color="warn" style="width: 100%;"><i class="fa fa-heart"></i> wishlist</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

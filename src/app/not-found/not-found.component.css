@@ -1,0 +1,44 @@
+.huh{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+}
+.err{
+    font-size: 200px;
+   color: #ffffff;
+}
+.err:hover{
+   
+    animation: flicker 1.5s infinite alternate;
+    color: #ffffff ;
+   
+}
+.err:hover ~ .huh{
+   background-color: rgb(25, 18, 32);
+}
+
+@keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100%{
+        text-shadow:
+    0px 0px 7px #ffffff,
+    0px 0px 10px #ffffff,
+    0px 0px 21px #ffffff,
+    0px 0px 42px #c924c9,
+    0px 0px 60px #c924c9,
+    0px 0px 90px #c924c9,
+    0px 0px 110px #c924c9,
+    0px 0px 125px #c924c9,
+    0px 0px 152px #c924c9,
+    0px 0px 182px #c924c9,
+    0px 0px 212px #c924c9,
+    0px 0px 242px #c924c9,
+    0px 0px 282px #c924c9,
+    0px 0px 300px #c924c9,
+    0px 0px 322px #c924c9,
+    0px 0px 352px #c924c9 ;
+
+    }
+    20%, 24%, 55% { 
+        text-shadow: none;
+    }
+}

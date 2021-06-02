@@ -1,0 +1,11 @@
+.tcolor{
+    background-color: #27292ba8;
+    color: #e4eef1de;
+    backdrop-filter: blur(3px);
+    
+}
+.tcolor:hover{
+    transition: 0.1s;
+    box-shadow:0 1px 3px rgb(255, 255, 255), 0 0 20px rgb(255, 254, 254);
+    
+}

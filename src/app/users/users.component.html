@@ -1,0 +1,31 @@
+<div class="container ">
+    <div class="row mx-0">
+        <div class=" col-sm-12 col-md-6 col-lg-4 col-xl-3 my-2 " 
+         *ngFor="let user of usersArray; let i = index" 
+         (click)="individualUser(user, i)"
+          style="cursor: pointer;">
+           <div class=" rounded tcolor mx-0  p-2">
+                <div>
+                    <span>{{user.name.firstname}}</span>
+                    <span> {{user.name.lastname}}</span>
+                </div>
+                <div class="text-muted small">({{user.email}})</div>
+                <div>{{user.address.city}}</div>
+                <div>
+                    <span>{{user.address.street}}</span>
+                    <span>, {{user.address.number}}</span>
+                </div>
+                <div>{{user.address.zipcode}}</div>
+                <div>
+                    {{user.geolocation}}
+                </div>
+                <div class="mt-2">
+                    {{user.phone}}
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <button mat-raised-button (click)="navigateToProduct()">Navigate to Product</button>
+    <button mat-raised-button (click)="addToCart()">Add To Cart</button>
+</div>

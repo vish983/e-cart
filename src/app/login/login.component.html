@@ -1,0 +1,33 @@
+<form [formGroup] = 'loginform' autocomplete="off"  >
+    <div class="row mx-0 mt-5 justify-content-center align-items-center" style="height: 100%;">
+        <div class="col-3 bg-light text-center rounded mr-3 ml-5 userbox"  *ngIf="!isVisible" style="height: 300px;">
+            <mat-form-field appearance="fill" class="mt-5" >
+                <mat-label>User Name</mat-label>
+                <input matInput formControlName = 'userId'>
+            </mat-form-field>
+            <div>         
+                <button mat-raised-button color='primary' class="button" (click)="login()">submit</button>
+               
+            </div>
+            <div class="text-danger">
+                {{this.msg}}
+            </div>
+            <div *ngIf="isVisible">
+                {{this.result.name.firstname}}
+            </div>
+            
+        </div>
+        
+            <div class="col-3 bg-light text-center rounded" *ngIf="isVisible" style="height: 300px;">
+                <mat-form-field appearance="fill" class="mt-5" >
+                    <mat-label>Password</mat-label>
+                    <input matInput type="password" formControlName = 'password'>
+                </mat-form-field>
+                <div>         
+                    <button mat-raised-button color='primary' class="button" (click)="passcheck()">Log In</button>
+                </div>
+            
+        </div>
+        
+    </div>
+</form>
