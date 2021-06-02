@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { IndividualUserComponent } from '../individual-user/individual-user.component';
 import { ApiServiceService } from '../services/api-service.service';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-users',
@@ -12,7 +13,7 @@ import { ApiServiceService } from '../services/api-service.service';
 export class UsersComponent implements OnInit {
   usersArray;
   userData;
-  constructor(private users: ApiServiceService, private router: Router , public dialog: MatDialog) { }
+  constructor(private users: ApiServiceService, private router: Router , public dialog: MatDialog, private dataservice: DataService) { }
 
   // individualUser = (id => {
   //   this.router.navigate(['/user', id]);
@@ -43,5 +44,14 @@ export class UsersComponent implements OnInit {
     });
   }
 
+  navigateToProduct = () => {
+    this.dataservice.setUserData(this.usersArray);
+    this.router.navigate(['/product']);
+  }
+  addToCart = () => {
+    this.dataservice.setLimitedUser(this.usersArray.slice(0, 4));
+    this.router.navigate(['/cart']);
+  }
+  
 
 }

@@ -20,10 +20,10 @@ export class ApiServiceService {
   getItemsByCategory = (cat) => {
     return this.http.get('https://fakestoreapi.com/products/category/' + cat);
   }
-  getAllUserData = () =>{
+  getAllUserData = () => {
     return this.http.get('https://fakestoreapi.com/users');
   }
-  getAllUserById = (id) =>{
+  getAllUserById = (id) => {
     return this.http.get('https://fakestoreapi.com/users/' + id )
   }
 }
